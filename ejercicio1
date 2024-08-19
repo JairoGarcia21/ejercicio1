@@ -1,0 +1,29 @@
+class gato:
+    def __init__(self, nombre, raza, color, edad, peso):  
+        self.nombre = nombre
+        self.raza = raza
+        self.color = color
+        self.edad = edad
+        self.peso = peso
+        self.estado = "NO ATENDIDO"
+        self.tamano = "Gato Grande" if peso > 10 else "Gato Pequeño" 
+
+    def __str__(self):  
+        return (f"Nombre: {self.nombre}\nRaza: {self.raza}\nColor: {self.color}\n"
+                f"Edad: {self.edad}\nPeso: {self.peso}kg\nEstado: {self.estado}\nTamaño: {self.tamano}")
+
+
+nombre = input("Ingresa el nombre del gato: ")
+raza = input("Ingresa la raza del gato: ")
+color = input("Ingresa el color del gato: ")
+edad = int(input("Ingresa la edad del gato: "))
+peso = int(input("Ingresa el peso del gato en kg: "))
+
+
+gato = gato(nombre, raza, color, edad, peso)
+
+
+gato.estado = "ATENDIDO"
+
+print("\nInformación del gato registrado:")
+print(gato)
